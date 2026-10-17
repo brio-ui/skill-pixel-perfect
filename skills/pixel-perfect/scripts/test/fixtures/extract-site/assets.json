@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "url": "__PAGE__/",
+  "out": "public/assets",
+  "publicBase": "/assets",
+  "assets": [
+    {
+      "url": "__PAGE__/img/hero.webp",
+      "local": "/assets/img/hero-1a2b3c4d.webp",
+      "path": "public/assets/img/hero-1a2b3c4d.webp",
+      "kind": "img",
+      "contentType": "image/webp",
+      "bytes": 83,
+      "sha256": "fixture",
+      "status": "saved",
+      "flag": false,
+      "license": null
+    },
+    {
+      "url": "__CDN__/fonts/brand.woff2",
+      "local": "/assets/font/brand-9f8e7d6c.woff2",
+      "path": "public/assets/font/brand-9f8e7d6c.woff2",
+      "kind": "font",
+      "contentType": "font/woff2",
+      "bytes": 34,
+      "sha256": "fixture",
+      "status": "saved",
+      "flag": true,
+      "license": {
+        "class": "owner-uploaded",
+        "flag": true,
+        "note": "Confirm the license covers the new site."
+      }
+    }
+  ],
+  "scripts": [],
+  "notes": []
+}

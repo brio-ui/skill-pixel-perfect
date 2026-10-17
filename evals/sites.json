@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "widths": [1440, 768, 390],
+  "bar": { "staticPass": 10, "motionPass": 8, "medianMinutes": 45, "pages": 12 },
+  "sites": [
+    { "id": "brio-home", "group": "own", "url": "https://brioui.com/", "license": "owned", "confirm": true, "note": "confirm final URL before the launch run" },
+    { "id": "brio-pricing", "group": "own", "url": "https://brioui.com/pricing", "license": "owned", "confirm": true },
+    { "id": "swoopcut-home", "group": "own", "url": "https://swoopcut.com/", "license": "owned", "confirm": true },
+    { "id": "fixedlaunch-home", "group": "own", "url": "https://fixedlaunch.com/", "license": "owned", "confirm": true },
+    { "id": "moonshift-home", "group": "own", "url": "https://moonshift.io/", "license": "owned", "confirm": true },
+    { "id": "dalemma-home", "group": "own", "url": "https://dalemma.com/", "license": "owned", "confirm": true },
+    { "id": "webflow-1", "group": "webflow", "url": null, "license": "template-copy-allowed", "confirm": true, "note": "pick a Webflow template whose license allows copying the live page" },
+    { "id": "webflow-2", "group": "webflow", "url": null, "license": "template-copy-allowed", "confirm": true },
+    { "id": "framer-1", "group": "framer", "url": null, "license": "template-copy-allowed", "confirm": true, "note": "pick a Framer template with more motion than the Webflow pair" },
+    { "id": "framer-2", "group": "framer", "url": null, "license": "template-copy-allowed", "confirm": true },
+    { "id": "wp-twentytwentyfive", "group": "wordpress", "url": "https://wp-themes.com/twentytwentyfive/", "license": "GPL" },
+    { "id": "wp-twentytwentyfour", "group": "wordpress", "url": "https://wp-themes.com/twentytwentyfour/", "license": "GPL" }
+  ]
+}

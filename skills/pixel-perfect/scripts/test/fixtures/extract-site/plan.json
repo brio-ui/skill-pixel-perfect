@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "url": "__PAGE__/",
+  "widths": [
+    1440
+  ],
+  "geometryWidths": [],
+  "sections": [
+    {
+      "id": "header",
+      "selector": "header.site",
+      "label": "Header"
+    },
+    {
+      "id": "hero",
+      "selector": "section#hero",
+      "label": "Hero"
+    },
+    {
+      "id": "footer",
+      "selector": "footer.site",
+      "label": "Footer"
+    }
+  ]
+}

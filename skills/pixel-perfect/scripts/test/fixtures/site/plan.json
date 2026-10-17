@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "url": "http://127.0.0.1/original.html",
+  "widths": [1440, 390],
+  "geometryWidths": [767, 768],
+  "sections": [
+    { "id": "header", "selector": "header.site-header", "label": "Header" },
+    { "id": "hero", "selector": "#hero", "label": "Build pages that convert" },
+    { "id": "logos", "selector": "#logos", "label": "Trusted by" },
+    { "id": "ticker", "selector": "#ticker", "label": "Live activity" },
+    { "id": "features", "selector": "#features", "label": "Features" },
+    { "id": "faq", "selector": "#faq", "label": "FAQ" },
+    { "id": "footer", "selector": "footer.site-footer", "label": "Footer" }
+  ],
+  "states": [
+    { "id": "nav-open", "section": "header", "action": "click", "selector": "header.site-header button.menu-toggle", "widths": [390], "label": "Mobile menu open" },
+    { "id": "hero-cta-hover", "section": "hero", "action": "hover", "selector": "#hero a.cta", "widths": [1440], "label": "Hero button hover" }
+  ],
+  "masks": [{ "selector": ".ticker-strip", "reason": "ticker" }],
+  "motion": [
+    { "id": "load:hero", "kind": "load", "section": "hero", "durationMs": 2000, "widths": [1440, 390] },
+    { "id": "hover:hero-cta-hover", "kind": "hover", "section": "hero", "state": "hero-cta-hover", "durationMs": 600, "widths": [1440] },
+    { "id": "loop:logos", "kind": "loop", "section": "logos", "durationMs": 3000, "periodMs": 2000, "driver": "css", "widths": [1440, 390] },
+    { "id": "loop:ticker", "kind": "loop", "section": "ticker", "durationMs": 3000, "driver": "js", "widths": [1440] },
+    { "id": "scroll:features", "kind": "scroll", "section": "features", "durationMs": 1500, "widths": [1440] },
+    { "id": "click:nav-open", "kind": "click", "section": "header", "state": "nav-open", "durationMs": 800, "widths": [390] }
+  ],
+  "notes": ["Fixture plan for scripts/test. Hand-written, not an auto plan."]
+}

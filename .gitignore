@@ -1,0 +1,6 @@
+node_modules/
+.private/
+pixel-perfect-report/
+evals/results/
+.DS_Store
+handover/

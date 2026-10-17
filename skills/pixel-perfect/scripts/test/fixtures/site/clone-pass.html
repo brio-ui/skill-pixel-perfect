@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Perfect fixture</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
+  .site-header { display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 40px; border-bottom: 1px solid #ddd; background: #fff; }
+  .logo { font-weight: 700; font-size: 20px; }
+  .site-header nav a { margin-left: 24px; color: #111; text-decoration: none; font-size: 15px; }
+  .menu-toggle { display: none; border: 0; background: #111; color: #fff; width: 44px; height: 44px; border-radius: 6px; }
+  #hero { height: 560px; display: flex; flex-direction: column; justify-content: center; padding: 0 120px; background: #f4f1ea; }
+  #hero h1 { font-size: 56px; line-height: 1.1; margin: 0 0 24px; animation: hero-in 600ms ease-out both; }
+  @keyframes hero-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  #hero p { font-size: 20px; max-width: 640px; line-height: 1.5; margin: 0 0 32px; }
+  a.cta { display: inline-block; width: fit-content; padding: 16px 28px; background: #1f5eff; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color 300ms ease; }
+  a.cta:hover { background: #0f3fc7; }
+  #logos { height: 180px; padding: 40px 0; background: #fff; overflow: hidden; }
+  #logos h2 { font-size: 16px; text-align: center; margin: 0 0 20px; color: #555; }
+  .marquee { display: flex; width: max-content; animation: marquee 2000ms linear infinite; }
+  .marquee span { padding: 0 40px; font-size: 22px; color: #333; font-weight: 600; white-space: nowrap; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  #ticker { height: 600px; background: #111; color: #fff; padding: 60px 40px; }
+  #ticker h2 { font-size: 32px; margin: 0 0 24px; }
+  .ticker-strip { position: relative; height: 80px; overflow: hidden; background: #222; }
+  .ticker-dot { position: absolute; top: 28px; left: 0; width: 24px; height: 24px; border-radius: 50%; background: #ff5a5f; }
+  .ticker-note { margin-top: 24px; font-size: 16px; color: #bbb; }
+  #features { padding: 80px 120px; background: #fff; }
+  #features h2 { font-size: 40px; margin: 0 0 40px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { border: 1px solid #ddd; border-radius: 12px; padding: 28px; }
+  .card h3 { margin: 0 0 12px; font-size: 22px; }
+  .card p { margin: 0; font-size: 16px; line-height: 1.5; color: #444; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 600ms ease, transform 600ms ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  #faq { padding: 80px 120px; background: #f9f9f9; }
+  #faq h2 { font-size: 32px; margin: 0 0 24px; }
+  details { border-bottom: 1px solid #ddd; padding: 16px 0; font-size: 18px; }
+  details p { margin: 12px 0 0; color: #444; line-height: 1.5; }
+  .site-footer { background: #111; color: #fff; height: 160px; padding: 48px 40px; font-size: 14px; }
+  .cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; height: 84px; background: #fff; border-top: 1px solid #ccc; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; font-size: 14px; z-index: 10; }
+  .cookie-banner button { padding: 10px 16px; border: 1px solid #111; background: #fff; border-radius: 6px; margin-left: 12px; }
+  @media (max-width: 767px) {
+    .site-header nav { display: none; }
+    .site-header nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: #fff; padding: 16px 24px; }
+    .menu-toggle { display: block; }
+    #hero { padding: 0 24px; height: 480px; }
+    #hero h1 { font-size: 36px; }
+    .cards { grid-template-columns: 1fr; }
+    #features, #faq { padding: 48px 24px; }
+    #ticker { padding: 40px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #hero h1, .marquee { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="cookie-banner" id="cookie-banner">
+  <span>We use cookies to run this demo.</span>
+  <span><button type="button" id="reject">Reject all</button><button type="button" id="accept">Accept all</button></span>
+</div>
+<header class="site-header" data-pp-section="header">
+  <div class="logo">Fixture</div>
+  <nav id="nav"><a href="#">Product</a><a href="#">Pricing</a><a href="#">Docs</a></nav>
+  <button class="menu-toggle" type="button" data-pp-trigger="nav-open" aria-controls="nav" aria-expanded="false">Menu</button>
+</header>
+<main>
+  <section id="hero" data-pp-section="hero">
+    <h1>Build pages that convert</h1>
+    <p>A small fixture page used to test the capture and grade scripts.</p>
+    <a class="cta" href="#" data-pp-trigger="hero-cta-hover">Start building</a>
+  </section>
+  <section id="logos" data-pp-section="logos">
+    <h2>Trusted by</h2>
+    <div class="marquee">
+      <span>Acme</span><span>Globex</span><span>Initech</span><span>Umbrella</span>
+      <span>Acme</span><span>Globex</span><span>Initech</span><span>Umbrella</span>
+    </div>
+  </section>
+  <section id="ticker" data-pp-section="ticker">
+    <h2>Live activity</h2>
+    <div class="ticker-strip" data-pp-mask><div class="ticker-dot" id="dot"></div></div>
+    <p class="ticker-note">Updated live</p>
+  </section>
+  <section id="features" data-pp-section="features">
+    <h2>Features</h2>
+    <div class="cards">
+      <article class="card reveal"><h3>Fast setup</h3><p>Start in minutes with the starter kit.</p></article>
+      <article class="card reveal"><h3>Clear pricing</h3><p>One plan with every feature included.</p></article>
+      <article class="card reveal"><h3>Real support</h3><p>Talk to a person who knows the product.</p></article>
+    </div>
+  </section>
+  <section id="faq" data-pp-section="faq">
+    <h2>FAQ</h2>
+    <details><summary>How long does setup take?</summary><p>Under ten minutes for most sites.</p></details>
+    <details><summary>Can I cancel at any time?</summary><p>Yes. Cancel from the settings page.</p></details>
+    <details><summary>Do you offer a free plan?</summary><p>There is a free tier with basic limits.</p></details>
+  </section>
+</main>
+<footer class="site-footer" data-pp-section="footer">Fixture footer. Built for tests.</footer>
+<script>
+  document.getElementById('reject').addEventListener('click', () => document.getElementById('cookie-banner').remove());
+  document.getElementById('accept').addEventListener('click', () => document.getElementById('cookie-banner').remove());
+  document.querySelector('.menu-toggle').addEventListener('click', (e) => {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('open');
+    e.currentTarget.setAttribute('aria-expanded', String(nav.classList.contains('open')));
+  });
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) if (entry.isIntersecting) entry.target.classList.add('in');
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  const dot = document.getElementById('dot');
+  const strip = dot.parentElement;
+  requestAnimationFrame(function tick(ts) {
+    const phase = (ts % 1600) / 1600;
+    dot.style.transform = `translateX(${Math.round(phase * (strip.clientWidth - 24))}px)`;
+    requestAnimationFrame(tick);
+  });
+</script>
+</body>
+</html>

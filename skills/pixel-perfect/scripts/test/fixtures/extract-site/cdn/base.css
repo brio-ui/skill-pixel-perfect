@@ -1,0 +1,13 @@
+@import url("more.css") (min-width: 600px);
+@font-face {
+  font-family: "Brand Sans";
+  src: url("fonts/brand.woff2") format("woff2");
+  font-display: block;
+}
+.btn { background: #0055aa; color: #ffffff; }
+.btn:hover { background: #003377; }
+.page-shell { --shell-width: 960px; max-width: 960px; }
+.grid { display: grid; }
+@media (min-width: 1000px) { .grid { grid-template-columns: 1fr 1fr; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes unused-spin { to { transform: rotate(360deg); } }
