@@ -9,10 +9,10 @@
     { "id": "fixedlaunch-home", "group": "own", "url": "https://fixedlaunch.com/", "license": "owned", "confirm": true },
     { "id": "moonshift-home", "group": "own", "url": "https://moonshift.io/", "license": "owned", "confirm": true },
     { "id": "dalemma-home", "group": "own", "url": "https://dalemma.com/", "license": "owned", "confirm": true },
-    { "id": "webflow-1", "group": "webflow", "url": null, "license": "template-copy-allowed", "confirm": true, "note": "pick a Webflow template whose license allows copying the live page" },
-    { "id": "webflow-2", "group": "webflow", "url": null, "license": "template-copy-allowed", "confirm": true },
-    { "id": "framer-1", "group": "framer", "url": null, "license": "template-copy-allowed", "confirm": true, "note": "pick a Framer template with more motion than the Webflow pair" },
-    { "id": "framer-2", "group": "framer", "url": null, "license": "template-copy-allowed", "confirm": true },
+    { "id": "webflow-1", "group": "webflow", "url": "https://thesaas-wbs.webflow.io/", "license": "template-copy-allowed", "note": "thesaas-wbs by Webestica; its Made in Webflow listing says it is free to clone. Static, no Webflow interactions" },
+    { "id": "webflow-2", "group": "webflow", "url": "https://saas-free-landing-page.webflow.io/", "license": "template-copy-allowed", "note": "saas-free-landing-page by AirDokan; its Made in Webflow listing calls it cloneable. Uses Webflow interactions" },
+    { "id": "framer-1", "group": "framer", "url": "https://saastemplate.framer.ai/", "license": "template-copy-allowed", "note": "SaasFlow; free on the Framer Marketplace with Remix for Free. Reveal effects and a ticker" },
+    { "id": "framer-2", "group": "framer", "url": "https://taskzen-gr8r.framer.ai/", "license": "template-copy-allowed", "note": "Taskzen by Gr8r Studio; free on the Framer Marketplace with Remix for Free. Scroll-triggered reveals, micro-interactions and a ticker" },
     { "id": "wp-twentytwentyfive", "group": "wordpress", "url": "https://wp-themes.com/twentytwentyfive/", "license": "GPL" },
     { "id": "wp-twentytwentyfour", "group": "wordpress", "url": "https://wp-themes.com/twentytwentyfour/", "license": "GPL" }
   ]

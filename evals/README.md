@@ -39,6 +39,6 @@ It reads every site folder, checks the bar, and writes `summary.md` and `summary
 
 ## Before the launch run
 
-The `own`, `webflow` and `framer` entries in `sites.json` carry `"confirm": true`. Confirm the own-site URLs are final, and pick the four template URLs (currently `null`), before the launch pass. The WordPress demos are fixed.
+The `own` entries in `sites.json` carry `"confirm": true`. Confirm the own-site URLs are final before the launch pass. The four template URLs were picked on 18 Oct 2026. Each listing offers its template free to clone or remix, and eval runs rebuild the pages locally only. The WordPress demos are fixed.
 
 Screenshots of pages we do not own stay out of any marketing. The eval reports are for measuring the skill, not for publishing.
